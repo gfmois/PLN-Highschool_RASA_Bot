@@ -1,9 +1,25 @@
 version: "3.1"
 
 intents:
-
+  - saludar
+  - despedir
+  - ask_services
 responses:
-
+  utter_saludar:
+    - text: "¡Hola!, ¿Cómo estás?"
+  utter_despedida:
+    - text: Adiós amiguito.
+  utter_services:
+    - text: "
+    Mis servicios disponibles son:
+      - Matrícula
+      - Becas
+      - Anulación
+      - Certificados
+      - Horario Clases (Mañana y Tarde)
+      - Familias profesionales
+      - Oferta de estudio
+    "
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

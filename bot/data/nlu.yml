@@ -1,20 +1,20 @@
 version: "3.1"
 
 nlu:
-- intent: saludar
-  examples: |
-    - hola
-    - hey
-    - buenas
-    - hello
-    - hi
-    - buenos dias
-    - buenas noches
-    - buenas tardes
-    - como estás?
-    - hola, como estás?
-    - que tal? 
-    - hola, Que tal estás?
+  - intent: saludar
+    examples: |
+      - hola
+      - hey
+      - buenas
+      - hello
+      - hi
+      - buenos dias
+      - buenas noches
+      - buenas tardes
+      - como estás?
+      - hola, como estás?
+      - que tal? 
+      - hola, Que tal estás?
   - intent: despedir
     examples: |
       - adiós
@@ -22,7 +22,18 @@ nlu:
       - ciao
       - xao
       - nos vemos mas tarde
-      - buenas noches
       - adiós
       - nos vemos
       - que tengas un buen día
+  - intent: ask_services
+    examples: |
+      - podrías decirme que servicios tienes?
+      - que puedes hacer?
+      - puedes ayudarme?
+      - ayuda
+      - necesito tu ayuda
+      - podrías ayudarme?
+      - por que puedo preguntar?
+      - que servicios tienes?
+      - que tienes?
+      - que sabes?
