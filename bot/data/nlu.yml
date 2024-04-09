@@ -1,3 +1,28 @@
 version: "3.1"
 
 nlu:
+- intent: saludar
+  examples: |
+    - hola
+    - hey
+    - buenas
+    - hello
+    - hi
+    - buenos dias
+    - buenas noches
+    - buenas tardes
+    - como estás?
+    - hola, como estás?
+    - que tal? 
+    - hola, Que tal estás?
+  - intent: despedir
+    examples: |
+      - adiós
+      - bye
+      - ciao
+      - xao
+      - nos vemos mas tarde
+      - buenas noches
+      - adiós
+      - nos vemos
+      - que tengas un buen día
