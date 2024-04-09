@@ -1,2 +1,3 @@
 *.pdf
 bot_venv
+bot/.rasa
