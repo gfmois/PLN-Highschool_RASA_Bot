@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "highschool_bot"
+version = "0.1.0"
+description = "RASA bot for Highchool Secretary"
+authors = ["Moisés <daw.moisesguerola@gmail.com>, Joaquim <joaquimdaweb@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.2"
+rasa = "^3.6.19"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

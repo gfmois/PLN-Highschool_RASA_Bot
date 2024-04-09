@@ -1,18 +1,3 @@
-# Procesamiento del Lenguaje Natural
-## Reto 5: Desarrollo de un asistente para la secretaría de centros de FP
-
-### Contexto
-Los institutos de FP y ESO aumentan exponencialmente su actividad administrativa cuando se acerca el final de curso. A diferencia de otros momentos durante el centro, la Secretaría se ve obligada a redoblar esfuerzos para atender a las consultas de futuros estudiantes interesados/as en matricularse en los institutos. Las consultas abarcan innumerables aspectos, desde conocer la oferta con la que cuenta el instituto, a las notas de corte que facilitan el acceso a los diferentes estudios, los períodos en que se abre la matrícula, etc.
-
-En estos momentos se haría necesario contar con algún asistente virtual que pueda descargara la secretaría de las tareas de atención a preguntas recurrentes, que por lo general no implican un proceso de interacción demasiado complejo.
-
-### Objetivo
-
-El objetivo de esta práctica será desarrollar una versión simplificada de lo que podría ser un asistente conversacional que complemente la actividad diaria de la secretaría del `CIPFP Mislata`, para lo que nos apoyaremos en la plataform `RASA`.
-
-Desarrollar un chatbot con una funcionalidad amplia podría comportar una inversión de tiempo considerable, así que limitaremos su margen de respuesta a cierto tipo de consultas que abarcarán los siguientes apartados:
-- *_Matrícula_*: Supone comunicar los plazos de matriculación para el curso `2024-25`, junto con la documentación necesaria.
-- *_Becas_*: # Procesamiento del Lenguaje Natural
 ## Reto 5: Desarrollo de un asistente para la secretaría de centros de FP
 
 ### Contexto
