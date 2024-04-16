@@ -2,3 +2,4 @@
 bot_venv
 bot/.rasa
 bot/models
+__pycache__
