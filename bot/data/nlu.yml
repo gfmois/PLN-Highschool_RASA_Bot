@@ -37,3 +37,46 @@ nlu:
       - que servicios tienes?
       - que tienes?
       - que sabes?
+  - intent: set_service_selected
+    examples: |
+      - [becas](service_selected)
+      - [matricula](service_selected)
+      - [anulacion](service_selected)
+      - [certificados](service_selected)
+      - [horario](service_selected)
+      - [familias](service_selected)
+      - [oferta](service_selected)
+      - quiero información sobre las [becas](service_selected)
+      - necesito ayuda con la [matricula](service_selected)
+  - intent: repeat_service_selected
+    examples: |
+      - Que servicio he seleccionado?
+      - que he escogido?
+      - cual he dicho? 
+      - repiteme el servicio escogido
+      - remiteme lo dicho
+  - intent: get_info_service
+    examples: |
+      - necesito informacion sobre las [becas](service_selected)
+      - ayuda con las [becas](service_selected)
+      - me ayudas con la [becas](service_selected)
+      - necesito ayuda con la [matricula](service_selected)
+
+  - intent: get_info_horario
+    examples: |
+      - ¿Cuál es el horario de clases?
+      - Quiero saber el horario de clases.
+      - ¿Puedes decirme el horario de clases?
+      - ¿Cuál es el horario de clases para el turno de mañana?
+      - ¿A qué hora son las clases por la mañana?
+      - ¿Cuál es el horario de clases para el turno de tarde?
+      - ¿A qué hora son las clases por la tarde?
+
+  - intent: get_info_annulations
+    examples: |
+      - ¿Cuáles son las fechas de anulación?
+      - Quiero saber sobre las anulaciones.
+      - ¿Puedes decirme las fechas de anulación?
+      - ¿Cuándo se pueden anular los cursos?
+      - ¿Cuál es la fecha límite para anular?
+      - ¿Cuándo vence el plazo para anulaciones?

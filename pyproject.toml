@@ -8,8 +8,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "3.10.2"
-rasa = "^3.6.19"
-
+rasa = "3.6.19"
+numpy = "1.22.3"
+pandas = "2.0.0"
 
 [build-system]
 requires = ["poetry-core"]

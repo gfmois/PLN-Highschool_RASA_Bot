@@ -4,22 +4,39 @@ intents:
   - saludar
   - despedir
   - ask_services
+  - give_service_selected
+  - repeat_service_selected
+  - set_service_selected
+  - get_info_service
+  - get_info_horario
+  - get_info_annulations
+entities:
+  - service_selected
+slots:
+  service_selected:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: service_selected
 responses:
-  utter_saludar:
+  utter_saludo:
     - text: "¡Hola!, ¿Cómo estás?"
   utter_despedida:
     - text: Adiós amiguito.
-  utter_services:
-    - text: "
-    Mis servicios disponibles son:
-      - Matrícula
-      - Becas
-      - Anulación
-      - Certificados
-      - Horario Clases (Mañana y Tarde)
-      - Familias profesionales
-      - Oferta de estudio
-    "
+  utter_ask_service:
+    - text: "¿Sobre que servicio quieres preguntarme?"
+  utter_response_annulations:
+    - text: "Las anulaciones tienen estas fechas:\n - Primer curso: 21 de abril de 2024\n - Segundo curso: 8 de enero de 2024\n"
+  utter_response_horario:
+    - text: "El horario de mañana es de 8am a 14pm.\nEl horario de tarde es de 156pm a 20pm"
+
+actions:
+  - action_get_services
+  - action_ask_service_selected
+  - action_say_service_selected
+  - action_get_service_selected_info
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

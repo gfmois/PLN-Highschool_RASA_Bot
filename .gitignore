@@ -1,3 +1,4 @@
 *.pdf
 bot_venv
 bot/.rasa
+bot/models

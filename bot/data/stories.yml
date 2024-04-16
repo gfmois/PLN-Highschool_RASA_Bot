@@ -1,11 +1,49 @@
 version: "3.1"
 
 stories:
-  - story: give me servies avalaibles
+  - story: get services avalaibles
     steps: 
       - intent: saludar
       - action: utter_saludo
       - intent: ask_services
-      - action: utter_services
+      - action: action_get_services
       - intent: despedir
-      - action: utter_despedir
+      - action: utter_despedida
+
+  - story: get services and ask
+    steps: 
+        - intent: saludar
+        - action: utter_saludo
+        - intent: ask_services
+        - action: action_get_services
+        - intent: get_info_service
+        - action: action_get_service_selected_info
+        - intent: despedir
+        - action: utter_despedida
+
+  - story: get horario
+    steps:
+      - intent: saludar
+      - action: utter_saludo
+      - intent: get_info_horario
+      - action: utter_response_horario
+      - intent: despedir
+      - action: utter_despedida
+
+  - story: get anulaciones
+    steps:
+      - intent: saludar
+      - action: utter_saludo
+      - intent: get_info_annulations
+      - action: utter_response_annulations
+      - intent: despedir
+      - action: utter_despedida
+
+  - story: get becas info
+    steps:
+      - intent: saludar
+      - action: utter_saludo
+      - intent: get_info_service
+      - action: action_get_service_selected_info
+      - intent: despedir
+      - action: utter_despedida
