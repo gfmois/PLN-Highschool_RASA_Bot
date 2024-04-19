@@ -1,17 +1,17 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - saludar
-  - despedir
-  - ask_services
-  - give_service_selected
-  - repeat_service_selected
-  - set_service_selected
-  - get_info_service
-  - get_info_horario
-  - get_info_annulations
+- ask_services
+- despedir
+- get_info_annulations
+- get_info_certificados
+- get_info_horario
+- get_info_service
+- give_service_selected
+- repeat_service_selected
+- saludar
+- set_service_selected
 entities:
-  - service_selected
+- service_selected
 slots:
   service_selected:
     type: text
@@ -21,22 +21,34 @@ slots:
       entity: service_selected
 responses:
   utter_saludo:
-    - text: "¡Hola!, ¿Cómo estás?"
+  - text: ¡Hola!, ¿Cómo estás?
   utter_despedida:
-    - text: Adiós amiguito.
+  - text: Adiós amiguito.
   utter_ask_service:
-    - text: "¿Sobre que servicio quieres preguntarme?"
+  - text: ¿Sobre que servicio quieres preguntarme?
   utter_response_annulations:
-    - text: "Las anulaciones tienen estas fechas:\n - Primer curso: 21 de abril de 2024\n - Segundo curso: 8 de enero de 2024\n"
+  - text: |
+      Las anulaciones tienen estas fechas:
+       - Primer curso: 21 de abril de 2024
+       - Segundo curso: 8 de enero de 2024
   utter_response_horario:
-    - text: "El horario de mañana es de 8am a 14pm.\nEl horario de tarde es de 156pm a 20pm"
-
+  - text: |-
+      El horario de mañana es de 8am a 14pm.
+      El horario de tarde es de 156pm a 20pm
+  utter_response_certificados:
+  - text: |-
+      Plazos para recoger todos los certificados disponibles: 
+       1. Certificado de Matrícula: 1 de septiembre - 30 de septiembre.
+       2. Certificado Académico Oficial Incompleto: 15 de enero - 15 de febrero / 15 de junio - 15 de julio.
+       3. Certificado Académico Oficial Completo: 15 de junio - 15 de julio.
+       4. Certificado de Becas: 1 de agosto - 31 de agosto.
+       5. Certificado para Acceso a la Universidad: 1 de julio - 31 de julio.
+       6. Certificado de Pruebas de Acceso (total o parcial): 1 de junio - 30 de junio.
 actions:
-  - action_get_services
-  - action_ask_service_selected
-  - action_say_service_selected
-  - action_get_service_selected_info
-
+- action_get_service_selected_info
+- action_get_services
+- action_ask_service_selected
+- action_say_service_selected
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

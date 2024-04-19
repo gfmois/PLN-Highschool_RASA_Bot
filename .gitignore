@@ -3,3 +3,4 @@ bot_venv
 bot/.rasa
 bot/models
 __pycache__
+.poetry.lock

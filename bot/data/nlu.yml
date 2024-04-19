@@ -79,4 +79,12 @@ nlu:
       - ¿Puedes decirme las fechas de anulación?
       - ¿Cuándo se pueden anular los cursos?
       - ¿Cuál es la fecha límite para anular?
-      - ¿Cuándo vence el plazo para anulaciones?
+      - ¿Cuándo vence la fecha para anulaciones?
+
+  - intent: get_info_certificados
+    examples: |
+      - ¿Cuál es el plazo límite para solicitar el certificado?
+      - ¿Cuándo estarán disponibles los certificados para su recogida?
+      - ¿Hay algún plazo específico para completar los requisitos y recibir el certificado?
+      - ¿Cuál es el plazo para solicitar una certificación adicional?
+      - ¿Hay algun plazo límite para entregar los documentos necesarios para la emisión del certificado?

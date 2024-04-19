@@ -1,14 +1,14 @@
 version: "3.1"
 
 stories:
-  - story: get services avalaibles
-    steps: 
-      - intent: saludar
-      - action: utter_saludo
-      - intent: ask_services
-      - action: action_get_services
-      - intent: despedir
-      - action: utter_despedida
+  # - story: get services avalaibles
+  #   steps: 
+  #     - intent: saludar
+  #     - action: utter_saludo
+  #     - intent: ask_services
+  #     - action: action_get_services
+  #     - intent: despedir
+  #     - action: utter_despedida
 
   - story: get services and ask
     steps: 
@@ -18,6 +18,15 @@ stories:
         - action: action_get_services
         - intent: get_info_service
         - action: action_get_service_selected_info
+        - intent: despedir
+        - action: utter_despedida
+  
+  - story: get actual service
+    steps:
+        - intent: saludar
+        - action: utter_saludo
+        - intent: repeat_service_selected
+        - action: action_say_service_selected
         - intent: despedir
         - action: utter_despedida
 
@@ -45,5 +54,14 @@ stories:
       - action: utter_saludo
       - intent: get_info_service
       - action: action_get_service_selected_info
+      - intent: despedir
+      - action: utter_despedida
+
+  - story: get certificados
+    steps:
+      - intent: saludar
+      - action: utter_saludo
+      - intent: get_info_certificados
+      - action: utter_response_certificados
       - intent: despedir
       - action: utter_despedida
