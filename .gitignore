@@ -3,4 +3,8 @@ bot_venv
 bot/.rasa
 bot/models
 __pycache__
+<<<<<<< HEAD
 .poetry.lock
+=======
+venv
+>>>>>>> gf-dev
