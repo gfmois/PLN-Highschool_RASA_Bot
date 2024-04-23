@@ -1,49 +1,112 @@
 version: "3.1"
 
 stories:
-  - story: get services avalaibles
-    steps: 
+  - story: greet 
+    steps:
       - intent: saludar
       - action: utter_saludo
+
+  - story: goodbye
+    steps:
+      - intent: despedir
+      - action: utter_despedida
+  
+  # Menu & Services
+  - story: show services
+    steps:
       - intent: ask_services
       - action: action_get_services
-      - intent: despedir
-      - action: utter_despedida
-
-  - story: get services and ask
-    steps: 
-        - intent: saludar
-        - action: utter_saludo
-        - intent: ask_services
-        - action: action_get_services
-        - intent: get_info_service
-        - action: action_get_service_selected_info
-        - intent: despedir
-        - action: utter_despedida
-
-  - story: get horario
+  
+  # Horario
+  - story: get info horario
     steps:
-      - intent: saludar
-      - action: utter_saludo
       - intent: get_info_horario
       - action: utter_response_horario
-      - intent: despedir
-      - action: utter_despedida
-
-  - story: get anulaciones
+  
+  # Anulaciones
+  - story: get info anulaciones
     steps:
-      - intent: saludar
-      - action: utter_saludo
       - intent: get_info_annulations
       - action: utter_response_annulations
-      - intent: despedir
-      - action: utter_despedida
-
-  - story: get becas info
+  
+  # Certificados
+  - story: get certificados
     steps:
-      - intent: saludar
-      - action: utter_saludo
-      - intent: get_info_service
-      - action: action_get_service_selected_info
-      - intent: despedir
-      - action: utter_despedida
+      - intent: get_info_certificados
+      - action: utter_response_certificados
+  
+  # Familias Profesionales
+  - story: get info familias
+    steps:
+      - intent: get_info_familias
+      - action: action_get_familias
+  
+  # Becas y Matrículas
+  - story: get info docu
+    steps:
+      - intent: get_info_docu
+      - action: action_docu_info
+      - intent: get_deny
+
+  - story: get info docu date confirm
+    steps:
+      - intent: get_info_docu
+      - action: action_docu_info
+      - intent: get_confirm
+      - action: action_date_info
+
+  - story: get info date
+    steps:
+      - intent: get_info_date
+      - action: action_date_info
+      - intent: get_deny
+  
+  - story: get info date docu confirm
+    steps:
+      - intent: get_info_date
+      - action: action_date_info
+      - intent: get_confirm
+      - action: action_docu_info
+
+  # Requisitos Acceso
+  - story: get info access requirements medium
+    steps:
+      - intent: get_info_access_requirements_medium
+      - action: action_docu_info
+      - intent: get_deny
+
+  - story: get info access requirements medium superior confirm
+    steps:
+      - intent: get_info_access_requirements_medium
+      - action: action_docu_info
+      - intent: get_confirm
+      - action: action_date_info
+
+  - story: get info access requirements superior
+    steps:
+      - intent: get_info_access_requirements_superior
+      - action: action_date_info
+      - intent: get_deny
+  
+  - story: get info access requirements superior medium confirm
+    steps:
+      - intent: get_info_access_requirements_superior
+      - action: action_date_info
+      - intent: get_confirm
+      - action: action_docu_info
+  
+  # Oferta informática
+  - story: get program offer
+    steps:
+      - intent: ask_programming_services
+      - action: action_get_program_offer
+  
+  - story: get program horario
+    steps:
+      - intent: get_program_service_horario
+      - action: action_get_program_horario
+
+  - story: get program subjects
+    steps:
+      - intent: get_program_service_subjects
+      - action: action_get_program_subjects
