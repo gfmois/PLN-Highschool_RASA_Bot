@@ -16,7 +16,7 @@ class ActionGetServices(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict
     ) -> List[Dict[Text, Any]]:
-        to_return: str = "Servicios disponibles: \n"        
+        to_return: str = "Servicios disponibles 💼🔧📞: \n"        
         for name in self.df["name"]:
             to_return += "  - {}\n".format(name)
             

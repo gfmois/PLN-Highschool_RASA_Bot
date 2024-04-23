@@ -22,7 +22,7 @@ class ActionGetProgramHorario(Action):
             # Filtrar por la familia "Informática"
             filtered_df = self.df[self.df['Familia'] == 'INFORMATICA']
             
-            to_return: str = "Opción no existente, ciclos formativos disponibles: \n"        
+            to_return: str = "Opción no existente ❌, ciclos formativos disponibles 📚: \n"        
             
             offers = filtered_df["Nombre"].unique()
             
@@ -41,5 +41,5 @@ class ActionGetProgramHorario(Action):
             elif len(turnos) > 1:
                 dispatcher.utter_message(text=f"Disponemos tanto del turno presencial como semipresencial para el ciclo {program_service}")
             else:
-                dispatcher.utter_message(text=f"No existe oferta formativa para el ciclo {program_service}")
+                dispatcher.utter_message(text=f"No existe oferta formativa para el ciclo {program_service} ❌")
         return []

@@ -20,7 +20,7 @@ class ActionGetProgramOffer(Action):
         # Filtrar por la familia "Informática"
         filtered_df = self.df[self.df['Familia'] == 'INFORMATICA']
         
-        to_return: str = "Oferta de informática disponible en CIPFP Mislata: \n"        
+        to_return: str = "Oferta de informática disponible en CIPFP Mislata 📚: \n"        
         
         offers = filtered_df["Nombre"].unique()
         

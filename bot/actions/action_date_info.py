@@ -19,7 +19,7 @@ class ActionDateInfo(Action):
         service_selected = tracker.get_slot("dual_info_service_selected")
         
         if not service_selected:
-            dispatcher.utter_message(text="No se que has seleccionado")
+            dispatcher.utter_message(text="Perdona, parece que no te he entendido correctamente. ¿Podrías repetirlo o intentar expresarlo de otra manera? 🤔😅")
         else:
             filter_service = self.df[self.df["service"] == service_selected]
             date_info = filter_service["date_info"].values[0]

@@ -17,7 +17,7 @@ class ActionGetFamilias(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict
     ) -> List[Dict[Text, Any]]:
-        to_return: str = "Familias profesionales existentes en CIPFP Mislata: \n"        
+        to_return: str = "Familias profesionales existentes en CIPFP Mislata: 🏫👩‍🏫👨‍🏫 \n"        
         
         familias = self.df["Familia"].unique()
         
