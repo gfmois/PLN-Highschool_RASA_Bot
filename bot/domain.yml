@@ -1,17 +1,26 @@
 version: '3.1'
 intents:
 - ask_services
+- ask_programming_services
 - despedir
+- get_confirm
+- get_deny
+- get_info_access_requirements_medium
+- get_info_access_requirements_superior
 - get_info_annulations
 - get_info_certificados
+- get_info_date
+- get_info_docu
+- get_info_familias
 - get_info_horario
 - get_info_service
-- give_service_selected
-- repeat_service_selected
+- get_program_service_horario
+- get_program_service_subjects
 - saludar
-- set_service_selected
 entities:
 - service_selected
+- dual_info_service
+- program_service
 slots:
   service_selected:
     type: text
@@ -19,22 +28,43 @@ slots:
     mappings:
     - type: from_entity
       entity: service_selected
+  dual_info_service_selected:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: dual_info_service
+  program_service_selected:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: program_service
 responses:
   utter_saludo:
-  - text: ¡Hola!, ¿Cómo estás?
+  - text: |-
+      ¡Hola 👋! Soy el chatbot del CIPFP Mislata😊.
+      Estoy aquí para ayudarte con todo lo relacionado con nuestra institución y tus estudios 📚.  
+      Puedo proporcionarte información sobre matrículas, becas, anulaciones, certificados, horarios de clases, requisitos de acceso y mucho más 🕵️‍♂️.  
+      Si tienes preguntas sobre las familias profesionales que ofrecemos o los estudios de informática disponibles. 
+      ¡Soy tu mejor recurso! 💡 
+      No dudes en preguntarme cualquier cosa que necesites saber. 🤖
+  
   utter_despedida:
-  - text: Adiós amiguito.
-  utter_ask_service:
-  - text: ¿Sobre que servicio quieres preguntarme?
+  - text: |-
+      ¡Claro! Siempre estoy aquí para ayudarte cuando lo necesites 😊. 
+      No dudes en volver si tienes más preguntas en el futuro 🔄.
+      ¡Que tengas un gran día! 🌞
+
   utter_response_annulations:
-  - text: |
+  - text: |-
       Las anulaciones tienen estas fechas:
        - Primer curso: 21 de abril de 2024
        - Segundo curso: 8 de enero de 2024
   utter_response_horario:
   - text: |-
       El horario de mañana es de 8am a 14pm.
-      El horario de tarde es de 156pm a 20pm
+      El horario de tarde es de 15pm a 20pm
   utter_response_certificados:
   - text: |-
       Plazos para recoger todos los certificados disponibles: 
@@ -44,11 +74,15 @@ responses:
        4. Certificado de Becas: 1 de agosto - 31 de agosto.
        5. Certificado para Acceso a la Universidad: 1 de julio - 31 de julio.
        6. Certificado de Pruebas de Acceso (total o parcial): 1 de junio - 30 de junio.
+
 actions:
-- action_get_service_selected_info
+- action_date_info
+- action_docu_info
+- action_get_familias
+- action_get_program_horario
+- action_get_program_offer
+- action_get_program_subjects
 - action_get_services
-- action_ask_service_selected
-- action_say_service_selected
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

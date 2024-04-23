@@ -15,6 +15,7 @@ nlu:
       - hola, como estás?
       - que tal? 
       - hola, Que tal estás?
+
   - intent: despedir
     examples: |
       - adiós
@@ -25,6 +26,22 @@ nlu:
       - adiós
       - nos vemos
       - que tengas un buen día
+
+  - intent: get_confirm
+    examples: |
+      - Si
+      - Si, por favor
+      - Por favor
+      - Por supuesto
+      - Afirmativo
+      - Vale
+  - intent: get_deny
+    examples: |
+      - No
+      - No, por favor
+      - Negativo
+      - En absoluto
+
   - intent: ask_services
     examples: |
       - podrías decirme que servicios tienes?
@@ -34,33 +51,7 @@ nlu:
       - necesito tu ayuda
       - podrías ayudarme?
       - por que puedo preguntar?
-      - que servicios tienes?
-      - que tienes?
       - que sabes?
-  - intent: set_service_selected
-    examples: |
-      - [becas](service_selected)
-      - [matricula](service_selected)
-      - [anulacion](service_selected)
-      - [certificados](service_selected)
-      - [horario](service_selected)
-      - [familias](service_selected)
-      - [oferta](service_selected)
-      - quiero información sobre las [becas](service_selected)
-      - necesito ayuda con la [matricula](service_selected)
-  - intent: repeat_service_selected
-    examples: |
-      - Que servicio he seleccionado?
-      - que he escogido?
-      - cual he dicho? 
-      - repiteme el servicio escogido
-      - remiteme lo dicho
-  - intent: get_info_service
-    examples: |
-      - necesito informacion sobre las [becas](service_selected)
-      - ayuda con las [becas](service_selected)
-      - me ayudas con la [becas](service_selected)
-      - necesito ayuda con la [matricula](service_selected)
 
   - intent: get_info_horario
     examples: |
@@ -88,3 +79,83 @@ nlu:
       - ¿Hay algún plazo específico para completar los requisitos y recibir el certificado?
       - ¿Cuál es el plazo para solicitar una certificación adicional?
       - ¿Hay algun plazo límite para entregar los documentos necesarios para la emisión del certificado?
+  
+  - intent: get_info_familias
+    examples: |
+      - ¿Qué familias profesionales tiene el instituto?
+      - ¿Cuantas familias profesionales hay en el instituto?
+      - ¿Qué tipo de familias profesionales existen?
+      - ¿Qué familias profesionales hay?
+   
+  - intent: get_info_docu
+    examples: |
+      - ¿Qué documentación necesito aportar para pedir una [beca](dual_info_service)?
+      - ¿Qué hace falta para pedir una [beca](dual_info_service)?
+      - ¿Qué necesito para pedir una [beca](dual_info_service)?
+      - ¿Qué debo hacer para obtener una [beca](dual_info_service)?
+      - ¿Como funciona el tema de las [beca](dual_info_service)s?
+      - ¿Qué requisitos debo cumplir para obtener la [matricula](dual_info_service)?
+      - ¿Qué documentos son necesarios para completar el proceso de [matricula](dual_info_service)?
+      - ¿Cual es la documentación que debo aportar para hacer una [matricula](dual_info_service)?
+      - ¿Qué hago para hacer una [matricula](dual_info_service)?
+  
+  - intent: get_info_date
+    examples: |
+      - ¿Cuándo se abre el plazo para solicitar una [beca](dual_info_service)?
+      - ¿Cuándo puedo solicitar una [beca](dual_info_service)?
+      - ¿Como están los plazos para solicitar las [beca](dual_info_service)s?
+      - ¿En que fecha se solicitan las [beca](dual_info_service)s?
+      - ¿El plazo para solicitar una [beca](dual_info_service)?
+      - ¿Cuándo se abre el periodo de [matricula](dual_info_service) para el próximo semestre/año académico?
+      - ¿Cómo están distribuidos los plazos para la [matricula](dual_info_service) en la institución?
+      - ¿Cuál es el plazo límite para solicitar la [matricula](dual_info_service)?
+      - ¿Cuál es la fecha de inicio para solicitar la [matricula](dual_info_service) en el programa/curso deseado?
+      - ¿Cuando puedo realizar una [matricula](dual_info_service)?
+      - ¿Cuando debo hacer la [matricula](dual_info_service)?
+  
+  - intent: get_info_access_requirements_medium
+    examples: |
+      - ¿Que [requisitos de acceso](dual_info_service) necesito para inscribirme en un ciclo de grado medio?
+      - ¿Cuales son los [requisitos de acceso](dual_info_service) que debo tener para poder acceder a un ciclo de grado medio?
+      - ¿Que [requisitos de acceso](dual_info_service) son necesarios para un ciclo de grado medio?
+  
+  - intent: get_info_access_requirements_superior
+    examples: |
+      - ¿Que [requisitos de acceso](dual_info_service) me hacen falta para inscribirme en un ciclo de grado superior?
+      - ¿Cuales son los [requisitos de acceso](dual_info_service) que necesito para poder acceder a un ciclo de grado superior?
+      - ¿Que [requisitos de acceso](dual_info_service) requiere un ciclo de grado superior?
+
+  - intent: ask_programming_services
+    examples: |
+      - ¿Se puede estudiar programación en vuestro instituto?
+      - ¿Qué oferta informática existe?
+      - ¿Qué grados de informática tiene el centro?
+      - ¿Qué tipo de estudios puedo cursar relacionados con la programación?
+      - ¿Hay algún ciclo de programación?
+  
+  - intent: get_program_service_horario
+    examples: |
+      - ¿En qué horario se imparten las clases del ciclo de [DAW](program_service)?
+      - ¿Cuál es el horario habitual del ciclo de [ASIR](program_service)?
+      - ¿A qué horas suele ser el ciclo de [SMR_A](program_service)?
+      - ¿Existen opciones de clases nocturnas para el ciclo de [S.M.X](program_service)?
+      - ¿Se ofrecen clases en línea para el ciclo de [CIBER](program_service) en horarios flexibles?
+      - ¿Cómo se distribuyen las horas de clase y prácticas en el horario semanal de [IABIG](program_service)?
+      - ¿El horario del ciclo [DAM_SEMI](program_service) permite trabajar a tiempo parcial?
+      - ¿Se puede elegir el turno de tarde para el ciclo [DAW._SEMIP](program_service)?
+      - ¿Que horas hay en el horario de [SMX_SEMI](program_service)?
+      - ¿El horario del ciclo [S.M.R_SEMI](program_service) permite compatibilizarlo con otras actividades?
+  
+  - intent: get_program_service_subjects
+    examples: |
+      - ¿Qué asignaturas tiene [DAW](program_service)?
+      - ¿Qué asignaturas se estudian en el primer semestre del ciclo de [DAW](program_service)?
+      - ¿Cuáles son los módulos principales del ciclo de [ASIR](program_service)?
+      - ¿Qué temas se cubren en el módulo de Redes en el ciclo de [SMR_A](program_service)?
+      - ¿Qué software se enseña en el módulo de Diseño Multimedia en el ciclo de [S.M.X](program_service)?
+      - ¿Cuál es el enfoque principal del módulo de Seguridad Informática en el ciclo de [CIBER](program_service)?
+      - ¿Qué herramientas se utilizan en el módulo de Análisis de Datos en el ciclo de [IABIG](program_service)?
+      - ¿Qué lenguajes de programación se estudian en el ciclo [DAM_SEMI](program_service)?
+      - ¿Qué proyectos se realizan en el módulo de Desarrollo Web en el ciclo [DAW._SEMIP](program_service)?
+      - ¿Qué aspectos aborda el módulo de Sistemas Operativos en el ciclo [SMX_SEMI](program_service)?
+      - ¿Cuáles son los principales conceptos que se cubren en el módulo de Hardware en el ciclo [S.M.R_SEMI](program_service)?
