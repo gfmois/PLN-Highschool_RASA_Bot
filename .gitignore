@@ -3,8 +3,7 @@ bot_venv
 bot/.rasa
 bot/models
 __pycache__
-<<<<<<< HEAD
-.poetry.lock
-=======
 venv
->>>>>>> gf-dev
+/public/CIPFP Mislata – Centro Integrado Público de Formación Profesional de Mislata_files
+/public/CIPFP Mislata – Centro Integrado Público de Formación Profesional de Mislata.html
+CIPFP Mislata – Centro Integrado Público de Formación Profesional de Mislata.html
